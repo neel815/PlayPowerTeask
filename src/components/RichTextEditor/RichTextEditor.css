@@ -524,95 +524,10 @@
   background: rgba(153, 27, 27, 0.1);
 }
 
-/* ===== DESKTOP RESPONSIVE (1200px and above) ===== */
-@media (min-width: 1200px) {
-  .editor-content {
-    max-height: calc(100vh - 600px);
-    min-height: 400px;
-    padding: 32px;
-    font-size: 1.1rem;
-  }
-  
-  .toolbar {
-    padding: 24px;
-    gap: 16px;
-  }
-  
-  .toolbar button {
-    width: 48px;
-    height: 48px;
-  }
-  
-  .font-size-select {
-    min-width: 160px !important;
-    height: 48px;
-    font-size: 1.1rem;
-  }
-  
-  .content-size-indicator {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
-}
-
-/* ===== LAPTOP RESPONSIVE (992px - 1199px) ===== */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .editor-content {
-    max-height: calc(100vh - 550px);
-    min-height: 350px;
-    padding: 28px;
-  }
-  
-  .toolbar {
-    padding: 20px;
-    gap: 14px;
-  }
-  
-  .toolbar button {
-    width: 44px;
-    height: 44px;
-  }
-  
-  .font-size-select {
-    min-width: 150px !important;
-    height: 44px;
-  }
-}
-
-/* ===== TABLET RESPONSIVE (768px - 991px) ===== */
-@media (min-width: 768px) and (max-width: 991px) {
+/* Simple responsive adjustments */
+@media (max-width: 768px) {
   .editor-content {
     max-height: calc(100vh - 400px);
-    min-height: 250px;
-    padding: 20px;
-  }
-  
-  .toolbar {
-    padding: 16px;
-    gap: 10px;
-  }
-  
-  .toolbar button {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .font-size-select {
-    min-width: 130px !important;
-    height: 40px;
-    font-size: 0.95rem;
-  }
-  
-  .content-size-indicator {
-    font-size: 0.75rem;
-    padding: 4px 8px;
-  }
-}
-
-/* ===== MOBILE LARGE RESPONSIVE (481px - 767px) ===== */
-@media (min-width: 481px) and (max-width: 767px) {
-  .editor-content {
-    max-height: calc(100vh - 350px);
     min-height: 200px;
     padding: 16px;
   }
@@ -631,7 +546,6 @@
   .font-size-select {
     min-width: 120px !important;
     height: 36px;
-    font-size: 0.9rem;
   }
   
   .content-size-indicator {
@@ -641,95 +555,5 @@
     margin-top: 8px;
     width: 100%;
     text-align: center;
-  }
-}
-
-/* ===== MOBILE SMALL RESPONSIVE (320px - 480px) ===== */
-@media (max-width: 480px) {
-  .editor-content {
-    max-height: calc(100vh - 300px);
-    min-height: 150px;
-    padding: 12px;
-    font-size: 0.95rem;
-  }
-  
-  .toolbar {
-    padding: 8px;
-    gap: 6px;
-    flex-wrap: wrap;
-  }
-  
-  .toolbar button {
-    width: 32px;
-    height: 32px;
-  }
-  
-  .toolbar button svg {
-    width: 16px;
-    height: 16px;
-  }
-  
-  .font-size-select {
-    min-width: 100px !important;
-    height: 32px;
-    font-size: 0.8rem;
-  }
-  
-  .content-size-indicator {
-    font-size: 0.65rem;
-    padding: 3px 6px;
-    margin-left: 0;
-    margin-top: 6px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .analyze-btn .ai-text {
-    font-size: 12px;
-  }
-}
-
-/* ===== EXTRA SMALL MOBILE (below 320px) ===== */
-@media (max-width: 320px) {
-  .editor-content {
-    max-height: calc(100vh - 250px);
-    min-height: 120px;
-    padding: 8px;
-    font-size: 0.9rem;
-  }
-  
-  .toolbar {
-    padding: 6px;
-    gap: 4px;
-    flex-wrap: wrap;
-  }
-  
-  .toolbar button {
-    width: 28px;
-    height: 28px;
-  }
-  
-  .toolbar button svg {
-    width: 14px;
-    height: 14px;
-  }
-  
-  .font-size-select {
-    min-width: 90px !important;
-    height: 28px;
-    font-size: 0.75rem;
-  }
-  
-  .content-size-indicator {
-    font-size: 0.6rem;
-    padding: 2px 4px;
-    margin-left: 0;
-    margin-top: 4px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .analyze-btn .ai-text {
-    font-size: 10px;
   }
 }

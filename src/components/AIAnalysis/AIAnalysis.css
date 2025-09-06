@@ -136,63 +136,8 @@
   color: #2e7d32;
 }
 
-/* ===== DESKTOP RESPONSIVE (1200px and above) ===== */
-@media (min-width: 1200px) {
-  .ai-analysis {
-    padding: 1.5rem;
-    max-height: 500px;
-  }
-  
-  .analysis-header h3 {
-    font-size: 1.3rem;
-  }
-  
-  .analysis-content {
-    font-size: 1rem;
-  }
-  
-  .analysis-section h4 {
-    font-size: 1.1rem;
-  }
-}
-
-/* ===== LAPTOP RESPONSIVE (992px - 1199px) ===== */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .ai-analysis {
-    padding: 1.25rem;
-    max-height: 450px;
-  }
-}
-
-/* ===== TABLET RESPONSIVE (768px - 991px) ===== */
-@media (min-width: 768px) and (max-width: 991px) {
-  .ai-analysis {
-    padding: 1rem;
-    max-height: 350px;
-    margin: 0.8rem 0;
-  }
-  
-  .analysis-header h3 {
-    font-size: 1.05rem;
-  }
-  
-  .analysis-content {
-    font-size: 0.9rem;
-  }
-  
-  .analysis-section {
-    margin-bottom: 0.8rem;
-    padding-bottom: 0.6rem;
-  }
-  
-  .analysis-section h4 {
-    font-size: 0.95rem;
-    margin: 0 0 0.5rem 0;
-  }
-}
-
-/* ===== MOBILE LARGE RESPONSIVE (481px - 767px) ===== */
-@media (min-width: 481px) and (max-width: 767px) {
+/* Simple responsive adjustments */
+@media (max-width: 768px) {
   .ai-analysis {
     padding: 0.8rem;
     max-height: 300px;
@@ -220,80 +165,6 @@
   .tag, .key-term {
     padding: 3px 8px;
     font-size: 0.8rem;
-  }
-}
-
-/* ===== MOBILE SMALL RESPONSIVE (320px - 480px) ===== */
-@media (max-width: 480px) {
-  .ai-analysis {
-    padding: 0.6rem;
-    max-height: 250px;
-    margin: 0.4rem 0;
-  }
-  
-  .analysis-header h3 {
-    font-size: 0.95rem;
-  }
-  
-  .analysis-content {
-    font-size: 0.8rem;
-  }
-  
-  .analysis-section {
-    margin-bottom: 0.5rem;
-    padding-bottom: 0.4rem;
-  }
-  
-  .analysis-section h4 {
-    font-size: 0.85rem;
-    margin: 0 0 0.3rem 0;
-  }
-  
-  .tag, .key-term {
-    padding: 2px 6px;
-    font-size: 0.75rem;
-  }
-  
-  .fallback-badge {
-    font-size: 0.6rem;
-    padding: 1px 4px;
-  }
-}
-
-/* ===== EXTRA SMALL MOBILE (below 320px) ===== */
-@media (max-width: 320px) {
-  .ai-analysis {
-    padding: 0.5rem;
-    max-height: 200px;
-    margin: 0.3rem 0;
-  }
-  
-  .analysis-header h3 {
-    font-size: 0.9rem;
-  }
-  
-  .analysis-content {
-    font-size: 0.75rem;
-  }
-  
-  .analysis-section {
-    margin-bottom: 0.4rem;
-    padding-bottom: 0.3rem;
-  }
-  
-  .analysis-section h4 {
-    font-size: 0.8rem;
-    margin: 0 0 0.25rem 0;
-  }
-  
-  .tag, .key-term {
-    padding: 1px 4px;
-    font-size: 0.7rem;
-  }
-  
-  .fallback-badge {
-    font-size: 0.55rem;
-    padding: 1px 3px;
   }
 }
 

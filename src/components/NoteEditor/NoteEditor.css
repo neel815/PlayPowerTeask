@@ -163,88 +163,15 @@
   font-size: 1.1em;
 }
 
-/* ===== DESKTOP RESPONSIVE (1200px and above) ===== */
-@media (min-width: 1200px) {
+/* Simple responsive adjustments */
+@media (max-width: 768px) {
   .note-editor {
-    padding: 40px;
-    max-width: 1200px;
-  }
-  
-  .title-input {
-    font-size: 2rem;
-  }
-  
-  .note-header {
-    margin-bottom: 2rem;
-  }
-}
-
-/* ===== LAPTOP RESPONSIVE (992px - 1199px) ===== */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .note-editor {
-    padding: 32px;
-    max-width: 1000px;
-  }
-  
-  .title-input {
-    font-size: 1.8rem;
-  }
-}
-
-/* ===== TABLET RESPONSIVE (768px - 991px) ===== */
-@media (min-width: 768px) and (max-width: 991px) {
-  .note-editor {
+    padding: 20px;
     margin: 1rem;
-    padding: 24px;
-    max-height: calc(100vh - 200px);
   }
 
   .title-input {
     font-size: 1.5rem;
-  }
-
-  .note-header {
-    margin-bottom: 1.2rem;
-  }
-
-  .editor-actions {
-    flex-direction: row;
-    gap: 12px;
-  }
-
-  .editor-actions button {
-    flex: 1;
-    justify-content: center;
-  }
-}
-
-/* ===== MOBILE LARGE RESPONSIVE (481px - 767px) ===== */
-@media (min-width: 481px) and (max-width: 767px) {
-  .note-editor {
-    margin: 0.5rem;
-    padding: 20px;
-    max-height: calc(100vh - 180px);
-  }
-
-  .title-input {
-    font-size: 1.3rem;
-  }
-
-  .note-header {
-    margin-bottom: 1rem;
-  }
-
-  .title-container {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-  }
-
-  .title-container .pin-button,
-  .title-container .encrypt-button {
-    align-self: flex-start;
-    width: 40px;
-    height: 40px;
   }
 
   .editor-actions {
@@ -254,94 +181,5 @@
 
   .editor-actions button {
     width: 100%;
-    justify-content: center;
-    padding: 12px 20px;
-  }
-}
-
-/* ===== MOBILE SMALL RESPONSIVE (320px - 480px) ===== */
-@media (max-width: 480px) {
-  .note-editor {
-    margin: 0.25rem;
-    padding: 16px;
-    max-height: calc(100vh - 150px);
-  }
-
-  .title-input {
-    font-size: 1.1rem;
-  }
-
-  .note-header {
-    margin-bottom: 0.8rem;
-  }
-
-  .title-container {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 6px;
-  }
-
-  .title-container .pin-button,
-  .title-container .encrypt-button {
-    align-self: flex-start;
-    width: 36px;
-    height: 36px;
-    font-size: 1.1rem;
-  }
-
-  .editor-actions {
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 1rem;
-    padding-top: 1rem;
-  }
-
-  .editor-actions button {
-    width: 100%;
-    justify-content: center;
-    padding: 10px 16px;
-    font-size: 0.95rem;
-  }
-
-  .note-meta {
-    font-size: 0.8rem;
-  }
-
-  .last-modified {
-    padding: 3px 6px;
-    font-size: 0.75rem;
-  }
-}
-
-/* ===== EXTRA SMALL MOBILE (below 320px) ===== */
-@media (max-width: 320px) {
-  .note-editor {
-    margin: 0.1rem;
-    padding: 12px;
-    max-height: calc(100vh - 120px);
-  }
-
-  .title-input {
-    font-size: 1rem;
-  }
-
-  .note-header {
-    margin-bottom: 0.6rem;
-  }
-
-  .title-container .pin-button,
-  .title-container .encrypt-button {
-    width: 32px;
-    height: 32px;
-    font-size: 1rem;
-  }
-
-  .editor-actions button {
-    padding: 8px 12px;
-    font-size: 0.9rem;
-  }
-
-  .note-meta {
-    font-size: 0.75rem;
   }
 }
