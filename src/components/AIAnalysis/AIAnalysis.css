@@ -8,7 +8,28 @@
   border-left: 4px solid #667eea;
   max-height: 400px;
   overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: #667eea #f1f1f1;
+}
+
+.ai-analysis::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ai-analysis::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.ai-analysis::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 4px;
+}
+
+.ai-analysis::-webkit-scrollbar-thumb:hover {
+  background: #5a67d8;
 }
 
 .ai-analysis.loading {
@@ -33,6 +54,12 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 0;
+  z-index: 10;
 }
 
 .analysis-header h3 {
@@ -90,6 +117,7 @@
   color: #444;
   line-height: 1.6;
   font-size: 0.95rem;
+  padding-bottom: 1rem;
 }
 
 .analysis-section {
