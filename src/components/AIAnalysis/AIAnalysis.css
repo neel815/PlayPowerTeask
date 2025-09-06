@@ -1,0 +1,299 @@
+.ai-analysis {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #667eea;
+  max-height: 400px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.ai-analysis.loading {
+  background: #e3f2fd;
+  border-left-color: #2196f3;
+  text-align: center;
+  color: #1976d2;
+  font-weight: 500;
+}
+
+.ai-analysis.error {
+  background: #fee2e2;
+  border-left-color: #ef4444;
+  color: #991b1b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.analysis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.analysis-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fallback-badge {
+  background: #f59e0b;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.analysis-warning {
+  background: #fef3c7;
+  border: 1px solid #fbbf24;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.analysis-warning p {
+  margin: 0;
+  color: #92400e;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #333;
+}
+
+.analysis-content {
+  color: #444;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.analysis-section {
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.analysis-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.analysis-section h4 {
+  color: #333;
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.tags-container, .key-terms-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag, .key-term {
+  background: #f0f0f0;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  color: #444;
+  display: inline-block;
+}
+
+.tag {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.key-term {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* ===== DESKTOP RESPONSIVE (1200px and above) ===== */
+@media (min-width: 1200px) {
+  .ai-analysis {
+    padding: 1.5rem;
+    max-height: 500px;
+  }
+  
+  .analysis-header h3 {
+    font-size: 1.3rem;
+  }
+  
+  .analysis-content {
+    font-size: 1rem;
+  }
+  
+  .analysis-section h4 {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== LAPTOP RESPONSIVE (992px - 1199px) ===== */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .ai-analysis {
+    padding: 1.25rem;
+    max-height: 450px;
+  }
+}
+
+/* ===== TABLET RESPONSIVE (768px - 991px) ===== */
+@media (min-width: 768px) and (max-width: 991px) {
+  .ai-analysis {
+    padding: 1rem;
+    max-height: 350px;
+    margin: 0.8rem 0;
+  }
+  
+  .analysis-header h3 {
+    font-size: 1.05rem;
+  }
+  
+  .analysis-content {
+    font-size: 0.9rem;
+  }
+  
+  .analysis-section {
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.6rem;
+  }
+  
+  .analysis-section h4 {
+    font-size: 0.95rem;
+    margin: 0 0 0.5rem 0;
+  }
+}
+
+/* ===== MOBILE LARGE RESPONSIVE (481px - 767px) ===== */
+@media (min-width: 481px) and (max-width: 767px) {
+  .ai-analysis {
+    padding: 0.8rem;
+    max-height: 300px;
+    margin: 0.6rem 0;
+  }
+  
+  .analysis-header h3 {
+    font-size: 1rem;
+  }
+  
+  .analysis-content {
+    font-size: 0.85rem;
+  }
+  
+  .analysis-section {
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .analysis-section h4 {
+    font-size: 0.9rem;
+    margin: 0 0 0.4rem 0;
+  }
+  
+  .tag, .key-term {
+    padding: 3px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+/* ===== MOBILE SMALL RESPONSIVE (320px - 480px) ===== */
+@media (max-width: 480px) {
+  .ai-analysis {
+    padding: 0.6rem;
+    max-height: 250px;
+    margin: 0.4rem 0;
+  }
+  
+  .analysis-header h3 {
+    font-size: 0.95rem;
+  }
+  
+  .analysis-content {
+    font-size: 0.8rem;
+  }
+  
+  .analysis-section {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
+  }
+  
+  .analysis-section h4 {
+    font-size: 0.85rem;
+    margin: 0 0 0.3rem 0;
+  }
+  
+  .tag, .key-term {
+    padding: 2px 6px;
+    font-size: 0.75rem;
+  }
+  
+  .fallback-badge {
+    font-size: 0.6rem;
+    padding: 1px 4px;
+  }
+}
+
+/* ===== EXTRA SMALL MOBILE (below 320px) ===== */
+@media (max-width: 320px) {
+  .ai-analysis {
+    padding: 0.5rem;
+    max-height: 200px;
+    margin: 0.3rem 0;
+  }
+  
+  .analysis-header h3 {
+    font-size: 0.9rem;
+  }
+  
+  .analysis-content {
+    font-size: 0.75rem;
+  }
+  
+  .analysis-section {
+    margin-bottom: 0.4rem;
+    padding-bottom: 0.3rem;
+  }
+  
+  .analysis-section h4 {
+    font-size: 0.8rem;
+    margin: 0 0 0.25rem 0;
+  }
+  
+  .tag, .key-term {
+    padding: 1px 4px;
+    font-size: 0.7rem;
+  }
+  
+  .fallback-badge {
+    font-size: 0.55rem;
+    padding: 1px 3px;
+  }
+}
+

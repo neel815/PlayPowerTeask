@@ -1,0 +1,347 @@
+.note-editor {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  max-height: calc(100vh - 80px);
+}
+
+.note-editor::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.note-editor:focus-within {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.note-header {
+  margin-bottom: 1.5rem;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.title-input {
+  flex: 1;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1f2937;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 12px 0;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.title-input:focus {
+  border-bottom-color: #667eea;
+  color: #374151;
+}
+
+.title-input::placeholder {
+  color: #9ca3af;
+}
+
+.pin-button {
+  background: rgba(102, 126, 234, 0.1);
+  border: none;
+  font-size: 1.3rem;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+  color: #667eea;
+}
+
+.pin-button:hover {
+  background: rgba(102, 126, 234, 0.2);
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.pin-button.pinned {
+  opacity: 1;
+  transform: rotate(-45deg) scale(1.1);
+  color: #667eea;
+  background: rgba(102, 126, 234, 0.2);
+}
+
+.note-meta {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.last-modified {
+  display: inline-block;
+  padding: 4px 8px;
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+
+.editor-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+.editor-actions button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.save-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.save-button:hover {
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.delete-button {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.delete-button:hover {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.4);
+}
+
+.ai-button {
+  background: #f4f0ff;
+  color: #6200ee;
+}
+
+.ai-button:hover {
+  background: #ede5ff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(98, 0, 238, 0.1);
+}
+
+.button-icon {
+  font-size: 1.1em;
+}
+
+/* ===== DESKTOP RESPONSIVE (1200px and above) ===== */
+@media (min-width: 1200px) {
+  .note-editor {
+    padding: 40px;
+    max-width: 1200px;
+  }
+  
+  .title-input {
+    font-size: 2rem;
+  }
+  
+  .note-header {
+    margin-bottom: 2rem;
+  }
+}
+
+/* ===== LAPTOP RESPONSIVE (992px - 1199px) ===== */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .note-editor {
+    padding: 32px;
+    max-width: 1000px;
+  }
+  
+  .title-input {
+    font-size: 1.8rem;
+  }
+}
+
+/* ===== TABLET RESPONSIVE (768px - 991px) ===== */
+@media (min-width: 768px) and (max-width: 991px) {
+  .note-editor {
+    margin: 1rem;
+    padding: 24px;
+    max-height: calc(100vh - 200px);
+  }
+
+  .title-input {
+    font-size: 1.5rem;
+  }
+
+  .note-header {
+    margin-bottom: 1.2rem;
+  }
+
+  .editor-actions {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .editor-actions button {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+/* ===== MOBILE LARGE RESPONSIVE (481px - 767px) ===== */
+@media (min-width: 481px) and (max-width: 767px) {
+  .note-editor {
+    margin: 0.5rem;
+    padding: 20px;
+    max-height: calc(100vh - 180px);
+  }
+
+  .title-input {
+    font-size: 1.3rem;
+  }
+
+  .note-header {
+    margin-bottom: 1rem;
+  }
+
+  .title-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .title-container .pin-button,
+  .title-container .encrypt-button {
+    align-self: flex-start;
+    width: 40px;
+    height: 40px;
+  }
+
+  .editor-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .editor-actions button {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+  }
+}
+
+/* ===== MOBILE SMALL RESPONSIVE (320px - 480px) ===== */
+@media (max-width: 480px) {
+  .note-editor {
+    margin: 0.25rem;
+    padding: 16px;
+    max-height: calc(100vh - 150px);
+  }
+
+  .title-input {
+    font-size: 1.1rem;
+  }
+
+  .note-header {
+    margin-bottom: 0.8rem;
+  }
+
+  .title-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .title-container .pin-button,
+  .title-container .encrypt-button {
+    align-self: flex-start;
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+
+  .editor-actions {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+
+  .editor-actions button {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 16px;
+    font-size: 0.95rem;
+  }
+
+  .note-meta {
+    font-size: 0.8rem;
+  }
+
+  .last-modified {
+    padding: 3px 6px;
+    font-size: 0.75rem;
+  }
+}
+
+/* ===== EXTRA SMALL MOBILE (below 320px) ===== */
+@media (max-width: 320px) {
+  .note-editor {
+    margin: 0.1rem;
+    padding: 12px;
+    max-height: calc(100vh - 120px);
+  }
+
+  .title-input {
+    font-size: 1rem;
+  }
+
+  .note-header {
+    margin-bottom: 0.6rem;
+  }
+
+  .title-container .pin-button,
+  .title-container .encrypt-button {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  .editor-actions button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .note-meta {
+    font-size: 0.75rem;
+  }
+}

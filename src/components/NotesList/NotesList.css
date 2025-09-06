@@ -1,0 +1,297 @@
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  flex: 1;
+}
+
+.note-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.note-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.note-item:hover::before {
+  transform: scaleY(1);
+}
+
+.note-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 1);
+}
+
+.note-item-content {
+  flex: 1;
+}
+
+.pin-indicator {
+  margin-right: 5px;
+}
+
+.note-title {
+  margin: 0 0 6px 0;
+  font-size: 1.1em;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.encrypted-indicator {
+  font-size: 0.9em;
+  opacity: 0.8;
+  color: #667eea;
+}
+
+.note-preview {
+  margin: 6px 0 8px 0;
+  font-size: 0.9em;
+  color: #6b7280;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+.note-date {
+  font-size: 0.8em;
+  color: #9ca3af;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 2px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.delete-button {
+  background: rgba(239, 68, 68, 0.1);
+  border: none;
+  font-size: 1.1em;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  padding: 8px;
+  border-radius: 8px;
+  color: #ef4444;
+}
+
+.delete-button:hover {
+  opacity: 1;
+  background: rgba(239, 68, 68, 0.2);
+  transform: scale(1.1);
+}
+
+/* ===== DESKTOP RESPONSIVE (1200px and above) ===== */
+@media (min-width: 1200px) {
+  .notes-list {
+    padding: 20px;
+    gap: 16px;
+    max-height: calc(100vh - 250px);
+  }
+  
+  .note-item {
+    padding: 20px;
+  }
+  
+  .note-title {
+    font-size: 1.2em;
+  }
+  
+  .note-preview {
+    font-size: 0.95em;
+  }
+  
+  .note-date {
+    font-size: 0.85em;
+    padding: 3px 10px;
+  }
+}
+
+/* ===== LAPTOP RESPONSIVE (992px - 1199px) ===== */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .notes-list {
+    padding: 18px;
+    gap: 14px;
+    max-height: calc(100vh - 220px);
+  }
+  
+  .note-item {
+    padding: 18px;
+  }
+  
+  .note-title {
+    font-size: 1.15em;
+  }
+}
+
+/* ===== TABLET RESPONSIVE (768px - 991px) ===== */
+@media (min-width: 768px) and (max-width: 991px) {
+  .notes-list {
+    padding: 12px;
+    gap: 10px;
+    max-height: calc(100vh - 180px);
+  }
+  
+  .note-item {
+    padding: 14px;
+  }
+  
+  .note-title {
+    font-size: 1.05em;
+  }
+  
+  .note-preview {
+    font-size: 0.85em;
+  }
+  
+  .note-date {
+    font-size: 0.75em;
+    padding: 2px 6px;
+  }
+  
+  .delete-button {
+    padding: 6px;
+    font-size: 1em;
+  }
+}
+
+/* ===== MOBILE LARGE RESPONSIVE (481px - 767px) ===== */
+@media (min-width: 481px) and (max-width: 767px) {
+  .notes-list {
+    padding: 10px;
+    gap: 8px;
+    max-height: calc(100vh - 160px);
+  }
+  
+  .note-item {
+    padding: 12px;
+  }
+  
+  .note-title {
+    font-size: 1em;
+  }
+  
+  .note-preview {
+    font-size: 0.8em;
+    margin: 4px 0 6px 0;
+  }
+  
+  .note-date {
+    font-size: 0.7em;
+    padding: 2px 5px;
+  }
+  
+  .delete-button {
+    padding: 5px;
+    font-size: 0.9em;
+  }
+}
+
+/* ===== MOBILE SMALL RESPONSIVE (320px - 480px) ===== */
+@media (max-width: 480px) {
+  .notes-list {
+    padding: 8px;
+    gap: 6px;
+    max-height: calc(100vh - 140px);
+  }
+  
+  .note-item {
+    padding: 10px;
+  }
+  
+  .note-title {
+    font-size: 0.95em;
+    margin: 0 0 4px 0;
+  }
+  
+  .note-preview {
+    font-size: 0.75em;
+    margin: 3px 0 5px 0;
+  }
+  
+  .note-date {
+    font-size: 0.65em;
+    padding: 1px 4px;
+  }
+  
+  .delete-button {
+    padding: 4px;
+    font-size: 0.8em;
+  }
+  
+  .pin-indicator {
+    margin-right: 3px;
+    font-size: 0.9em;
+  }
+  
+  .encrypted-indicator {
+    font-size: 0.7em;
+  }
+}
+
+/* ===== EXTRA SMALL MOBILE (below 320px) ===== */
+@media (max-width: 320px) {
+  .notes-list {
+    padding: 6px;
+    gap: 4px;
+    max-height: calc(100vh - 120px);
+  }
+  
+  .note-item {
+    padding: 8px;
+  }
+  
+  .note-title {
+    font-size: 0.9em;
+    margin: 0 0 3px 0;
+  }
+  
+  .note-preview {
+    font-size: 0.7em;
+    margin: 2px 0 4px 0;
+  }
+  
+  .note-date {
+    font-size: 0.6em;
+    padding: 1px 3px;
+  }
+  
+  .delete-button {
+    padding: 3px;
+    font-size: 0.75em;
+  }
+  
+  .pin-indicator {
+    margin-right: 2px;
+    font-size: 0.8em;
+  }
+  
+  .encrypted-indicator {
+    font-size: 0.65em;
+  }
+}
